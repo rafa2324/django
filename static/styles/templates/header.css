@@ -1,0 +1,121 @@
+header {
+    display: flex;
+}
+
+/*----------------------------------------
+        .header__menu
+-----------------------------------------*/
+.header__menu {
+    width: 20%;
+    padding-left: var(--padding-left-view);
+    display: flex;
+    align-items: center;
+    
+}
+.header__menu > .material-icons {
+    font-size: 2rem;
+    background-color: var(--nav-color-text);
+}
+
+/*------------------------------------------
+        .header__logo
+-------------------------------------------*/
+.header__logo {
+    width: 50%;
+    display: flex;
+    place-content: center;
+}
+.header__logo > img {
+    height: auto;
+    max-height: 3rem;
+}
+
+/*--------------------------------------------
+        .header__user
+---------------------------------------------*/
+.header__user {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    padding: 0 1.5rem;
+}
+.header__user  img {
+    /* height: auto; */
+    /* max-height: 3rem; */
+    height: 2.2rem;
+    width: 2.2rem;
+    border-radius: 25px;
+}
+
+/*--------------------------------------
+                .header__usernav 
+ --------------------------------------*/
+.header__usernav {
+    position: fixed;
+    top: 3rem;
+    left: 100%;
+    padding: 1rem;
+    width: 100%;
+    max-width: 35%;
+    background-color: var(--nav-color-background);
+    transition: all 0.4s;
+}
+.header__usernav__show {
+    left: 65%;
+}
+
+.header__usernav ul {
+    list-style: none;
+    background-color: var(--nav-color-background);
+    width: 100%;
+}
+.header__usernav li {
+    line-height: 2rem;
+}
+.header__usernav ul a {
+    color: var(--nav-color-text);
+    display: block;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header__usernav a:hover {
+    background-color: var(--nav-color-hover-background); 
+    width: 100%;
+}
+
+.header__usernav li img {
+    height: 2.2rem;
+    width: 2.2rem;
+    border-radius: 25px;
+    vertical-align: middle;
+}
+.header__usernav .li-img {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+.header__usernav span {
+    padding-left: .5rem;
+    color: var(--nav-color-text);}
+
+
+/*----------------------------------- 
+    Media screen 
+-------------------------------------*/
+@media  screen and (min-width:600px){
+    /* For tablets: */
+
+}
+  
+@media screen and (min-width:768px){ 
+    /* For desktop: */
+    .header__usernav__show {
+        left: 80%;
+    }
+    .header__usernav span {
+        padding-left: .7rem;
+    }
+       
+}

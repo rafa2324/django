@@ -1,0 +1,40 @@
+:root {
+    --text-color : #b2bdbd; /*white;*/
+    --background-color :  #2d2d39; /* #141414; */
+    --background-color-secondary :#02284D;
+    --text-color-secondary:lightgray;
+    --text-color-info: blue;
+    --error-color : red;
+    --a-color : seagreen;
+    --border-color : gray;
+
+    --header-background-color : #51546e;  /*var(--background-color);*/
+
+    --nav-color-background: #242424; /* seagreen;*/
+    --nav-color-text : white;
+    --nav-color-activate-background : gray;
+    --nav-color-activate-text : white;
+    --nav-color-hover-background : #545454; /* slategray #ddd;*/
+    --nav-color-hover-text : white; /* black;*/
+
+    --btn-success : #71c6dd; /*rgb(44, 117, 177); */
+    --btn-secondary: lightgray;
+    --btn-danger: red;
+    --btn-text-color : #3f4156; /*white;*/
+    --btn-background-color : #141414;   
+
+    --grid-background-color-title :  #696d97; /*lightgray; */
+    --grid-color-title : #e1f6fb; /*black; */
+    --grid-background-color-striped : #454545;
+    --grid-text-color : white;
+
+    --success: #5dd693; /*seagreen;*/
+    --danger: #fc4b0b;/*red;*/
+    --primary: #71c6dd; /*rgb(44, 117, 177);*/
+    --secondary: #ACA8A7;
+    --info: #F9DF1D;
+
+    --color-dark-light: #696d97;
+    --color-light: #e5e5e5;
+
+}

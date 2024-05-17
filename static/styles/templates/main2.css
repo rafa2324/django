@@ -1,0 +1,456 @@
+
+:root {
+    --padding-left-view : 2rem;
+
+    --col-1 : 8.33%;
+    --col-2 : 16.66%;
+    --col-3 : 25%;
+    --col-4 : 33.33%;
+    --col-5 : 41.66%;
+    --col-6 : 50%;
+    --col-7 : 58.33%;
+    --col-8 : 66.66%;
+    --col-9 : 75%;
+    --col-10 : 83.33%;
+    --col-11 : 91.66%;
+    --col-12 : 100%;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-size: 1rem; */
+    font-size: inherit;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+  
+/* html {
+    font-size: 56.25%;
+} */
+  
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    /* font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+    font-size: 1.0rem;
+    /*line-height: 2.6;
+    font-weight: 400;
+    font-size: 1.5rem; */
+}
+
+.container {
+    margin: 1rem;
+}
+
+
+.input--error {
+    border-color: var(--error-color);
+}
+
+.error--msg {
+    font-size: 0.85rem;
+    color: var(--error-color);
+}
+
+a {
+    color: var(--a-color);
+}
+
+input {
+    height: 1.5rem;
+    padding: 0.7rem 0.5rem;
+}
+
+/* input:invalid { 
+    border-color: red; 
+} 
+input, input:valid { 
+    border-color: black; 
+} */
+
+
+/* success, danger, info, primary, secondary */
+.success {
+    color: var(--success);
+}
+.danger {
+    color: var(--danger);
+}
+.info {
+    color: var(--info);
+}
+.primary {
+    color: var(--primary);
+}
+.secondary {
+    color: var(--secondary);
+}
+
+.background-success {
+    background-color: var(--success);
+}
+.background-danger {
+    background-color: var(--danger);
+}
+.background-info {
+    background-color: var(--info);
+}
+.background-primary {
+    background-color: var(--primary);
+}
+.background-secondary {
+    background-color: var(--secondary);
+}
+
+.button, button, input[type=button], input[type=submit] {
+    /* height: 30px; */
+    height: 2rem;
+    border: 0;
+    padding: 0.15rem 1rem;
+    /* font-size: 1rem; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    place-items: center;
+    text-transform: uppercase;
+}
+.button > span {
+    margin-right: .5rem;
+}
+.button--primary {
+    background-color: var(--primary);
+    color: var(--btn-text-color);
+    /* text-transform: uppercase; */
+    /* width: 7rem; */
+    display: flex;
+    justify-content: center;
+}
+.button--secondary {
+    background-color: var(--secondary);
+    color: var(--btn-background-color);
+    text-transform: uppercase;
+    /* color: var(--btn-text-color); */
+    /* width: 7rem; */
+    display: flex;
+    justify-content: center;
+}
+.button--danger {
+    background-color: var(--danger);
+    /* color: var(--background-color); */
+    color: var(--btn-text-color);
+}
+.button--info {
+    background-color: var(--info);
+    color: var(--btn-background-color);
+    text-transform: uppercase;
+    /* color: var(--btn-text-color); */
+    /* width: 7rem; */
+    display: flex;
+    justify-content: center;
+}
+
+.material-icons {
+    font-size: 1.2rem;
+    color: var(--btn-text-color);
+}
+
+
+
+/* clases de los templates */
+.template__title {
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: row; 
+}
+.template__title > h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: left;
+    padding-bottom: 5px;
+}
+.template__body {
+    padding: 0 0.5rem;
+}
+
+/* Grid old OBSOLETO */
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100%;
+    width: 100%; */
+    padding: 0.25rem 0;
+}
+.col__left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* height: 100%;
+    width: 100%; */
+    padding: 0.25rem 0;
+}
+.col__right {
+    display: flex;
+    justify-content: flex-end;
+    /* flex-wrap: wrap; */
+    /* padding-left: 5px; */
+    padding: 0.25rem 0.15rem 0 0.25rem;
+}
+
+/*********** The Modal OBSOLETO*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    transition: all 0.4s;
+    z-index: 1; 
+    box-sizing: border-box;
+    width: 100%;               
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: var(--background-color); 
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    max-height: 70%;
+}
+  
+.modal__content {
+    margin: 0.5rem; 
+    padding: 0.5rem;
+    border: 1px solid gray;
+    background-color: var(--background-color);
+    margin: auto;
+    width: 80%;
+}
+
+.modal__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    border: 1px solid darkgray;
+    padding: 0.25rem;
+}
+    
+.modal__close:hover,
+.modal__close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+/***************************************************/
+
+/* NEW */
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.main2 {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+}
+.main2 header {
+    /* background-color: lightblue; */
+    box-sizing: border-box;
+    height: 3rem;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    background-color:var(--header-background-color);
+}
+.main2 nav {
+    background-color: lightgray;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 2;
+}
+.main2 section {
+    /* background-color: greenyellow; */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 3rem;
+    width: 100%;
+    z-index: 1;
+    /* margin: 10; */
+}
+.main2 footer {
+    /* background-color: lightcoral; */
+    border-top: 1px solid gray;
+    margin-top: 3.5rem;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    margin: 1.5rem 0.7rem;
+}
+
+
+/*----------------------------
+Table (ex Grid => Flexbox) OBSOLETO
+------------------------------*/
+.table {
+    display: flex;
+    flex-direction: column;
+}
+.table__row {
+    display: flex;
+    margin-bottom: 0.35rem;
+    border-radius: 7px;
+    color: var(--grid-text-color);
+}
+.table__col {
+    text-align: center;
+    padding: 0.25rem;
+}
+.table__data {
+    height: 100%;
+}
+.row__striped {
+    background-color: var(--grid-background-color-striped);
+    color: var(--grid-text-color);
+    /* width: 100%; */
+}
+.row__title,
+.row__pie  {
+    padding: 0.25rem 0 ;
+    background-color: var(--grid-background-color-title);
+    color: var(--grid-color-title);
+    font-weight: 700;
+    border-radius: 7px;
+}
+.grid__msg {
+    margin: 0.5rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+/* ------------------------------------------------------*/
+
+
+/*-----------------------------------
+    Forms
+------------------------------------*/
+form {
+    /* margin: 1.5rem 1.5rem; */
+    display: flex;
+    flex-direction: column;
+}
+
+form .form__inputs {
+    padding: 0 .5rem;
+}
+
+form .form__inputs > div,
+.form-control {
+    padding-bottom: 1rem;
+}
+
+form .form__inputs input[type='text'], input[type='number'] {
+    background: transparent;
+    border: 1px solid var(--color-dark-light);
+    padding: 1rem;
+    border-radius: 3px;
+    width: 100%;
+    color: var(--color-light);
+    font-weight: 500;
+    outline: none;
+}
+
+form .form__inputs > div > input[type='text'],
+.form-control {
+    width: 100%;
+    margin-top: 0.40rem;
+}
+
+form .checkbox {
+    display: flex;
+    align-items: center;
+}
+form .checkbox > input[type='checkbox'] {
+    margin-left: 0.5rem;
+}
+
+form div select,
+.form-control select {
+    height: 1.5rem;
+    width: 100%;
+    /* background-color: transparent;
+    color: #e5e5e5; */
+}
+
+form .form__options {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+form .form__options > button, input[type='button'], input[type='submit'] {
+    /* display: inl ine ; */
+    height: 2rem;
+    padding: 0.15rem 1rem;
+    margin-right: 0.5rem;
+}
+
+.form-control input[type='date'] {
+    margin:0;
+    height: 34px;
+    padding: 7px 2px;
+    line-height: 34px;
+    font-size: 14px;
+}
+
+/* Especiales */
+.stock_minimo {
+    color: white;
+    background-color: var(--danger);
+}
+
+.input-right {
+    text-align: right;
+}
+
+/*----------------------------------- 
+    Media screen 
+-------------------------------------*/
+@media  screen and (min-width:600px){
+    /* For tablets: */
+
+}
+  
+@media screen and (min-width:768px){ 
+     /* For desktop: */
+     :root {
+        --padding-left-view : 2rem;
+        --col-l-1 : 8.33%;
+        --col-l-2 : 16.66%;
+        --col-l-3 : 25%;
+        --col-l-4 : 33.33%;
+        --col-l-5 : 41.66%;
+        --col-l-6 : 50%;
+        --col-l-7 : 58.33%;
+        --col-l-8 : 66.66%;
+        --col-l-9 : 75%;
+        --col-l-10 : 83.33%;
+        --col-l-11 : 91.66%;
+        --col-l-12 : 100%;        
+     }  
+     .main2 nav {
+         width: 300px;
+     }
+     .container {
+        margin: 1.5rem;
+    }    
+}

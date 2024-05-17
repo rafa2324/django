@@ -1,0 +1,13 @@
+{% extends general.template_container.container %}
+
+{% block content %}
+    <div class="container">
+    {% if data.env_version %}
+        <h4>{{ context.data.env_version }}</h4>
+        <h4>ismytv@gmail.com</h4>
+        <h4>© 2023 Web Solutions </h4>
+    {% else %}
+        No se encontro variable de entorno
+    {%endif%}
+    </div>
+{% endblock content %}

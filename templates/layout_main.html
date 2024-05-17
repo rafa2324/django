@@ -1,0 +1,60 @@
+<!doctype html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" color="red" href="{% static 'images/favicon.png' %}">
+
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+
+    <!-- app -->
+    <link rel="stylesheet" type='text/css' href="{% static general.filename_colors_css %}">
+    <link rel="stylesheet" type='text/css' href="{% static 'styles/templates/main2.css' %}">
+
+    <!-- css -->
+    {% block head %}{%endblock%}
+ 
+    <!-- JAVASCRIPT -->
+    <!-- jquery -->
+    <script type="text/javascript" src="{% static 'js/lib/jquery-3.5.1.min.js' %}"></script>
+
+    {% if general.title %}
+    <title>{{ general.title }}</title>
+    {% endif %}
+</head>
+
+<body>
+    <div class="main2 container-fluid">
+
+        <!-- header -->
+        {% include general.template_container.header %}
+
+        <!-- search -->
+
+        <!-- nav -->
+        {% include general.template_container.nav %}
+        
+        <!-- Mensajes enviados por flashed -->
+        {% with alert_flash='alert__flash__left' %}
+        {% include general.template_container.alert_flash %}
+        {% endwith %} 
+
+        <!-- main, checkout -->
+        <section>
+            {% block content %} {% endblock %}
+        </section>
+        
+        <!-- footer  -->
+        {% include general.template_container.footer %}
+
+    </div>
+</body>
+
+</html>
+

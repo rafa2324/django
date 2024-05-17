@@ -1,0 +1,32 @@
+
+
+<div class="listview">
+    <div class="template__title">
+        <h1>{{ general.listview_title }}</h1>
+   </div>
+    
+    <div class="listview__options">
+        
+        {% if not data.only_one_reg  or data.only_one_reg == False %}
+            {% if general.is_disabled_button_add == False %}
+                <button id='btn_new' class="button button--primary" onclick="action_redirect('{{actions.action_new}}')">
+                <span class="material-icons">add</span><span>{{general.listview_btn_new_text}}</span>
+                </button>
+            {% endif %}
+            <div class="listview__options__filter">
+                <input type="text" id="filter_input"  placeholder="filtrar por">
+                <span class="material-icons" id="filter_clear">close</span>
+                <span class="material-icons" id="filter_search">search</span>
+            </div>
+        {% endif %}
+
+    </div>
+
+    <!-- datagrid -->
+    <div id="datagrid" class="form_datagrid"></div>
+
+    
+</div>
+
+{% include 'components/modal_dialog.html' %}
+

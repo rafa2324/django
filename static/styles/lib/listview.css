@@ -1,0 +1,85 @@
+.listview {
+    margin: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+ }
+.listview__options {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+.listview__options #btn_new {
+    max-width: 40%;
+}
+.listview__options__filter {
+    display: flex;
+    border: 1px solid;
+    border-radius: 7px;
+    background-color: white;
+    /* margin-left: 3rem; */
+    width: 50%;
+}
+.listview__options__filter > input {
+    margin: auto 1rem;
+    outline: none;
+    border: 0;
+    font-size: 1.1rem;
+    width: 100%
+}
+.listview__options__filter > span {
+    margin: auto 0.25rem auto 0;
+    color: var(--success);
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* .table__data .material-icons {
+    color: var(--text-color);
+    font-size: 1.5rem;
+} */
+
+/* 
+.pagination {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.7rem;
+    display: flex;
+}
+#pagination_buttons {
+    display: flex;
+}
+.pagination button {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    justify-content: center;
+}
+.pagination__detail {
+    margin-top: 0.5rem;
+}
+
+.primary {
+    background-color: var(--primary);
+    color: var(--btn-text-color);
+}
+.secondary {
+    background-color: var(--secondary);
+    color: var(--btn-background-color);
+} */
+
+
+
+@media  screen and (min-width:600px){
+    /* For tablets: */
+    .listview__options__filter {
+        width: 30%;
+    }
+}
+  
+@media screen and (min-width:768px){ 
+    /* For desktop: */
+    .listview {
+        margin: 1rem 1.5rem;
+    }
+}

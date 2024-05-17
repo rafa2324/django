@@ -1,0 +1,42 @@
+{% extends general.template_container.container %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type='text/css' href="{% static  'styles/login/login.css' %}">
+{% endblock head %}
+
+{% block content %}
+
+<div class="login">
+    <!-- logo -->
+    <img src="{% static 'images/logo3.png' %}" class='login__logo' alt="">
+
+    
+        <div class="login__container">
+            <h1>Iniciar sesión</h1>
+
+            <form method="POST" action="">
+                {% csrf_token %}
+
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+
+                <input type="submit" value="Login">
+
+                
+        
+            </form>
+
+            <div class='login__register'>
+                <span>¿No tienes una cuenta?</span>
+                <a href="{{data.action_register}}">Sign up</a> 
+
+            </div>
+        </div>
+    
+
+</div>
+{% endblock content %}

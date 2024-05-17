@@ -1,0 +1,40 @@
+{% extends general.template_container.container %}
+{% load static %} 
+
+{% block head %}
+<link rel="stylesheet" type='text/css' href="{% static 'styles/login/login.css' %}">
+{% endblock head %}
+
+{% block content %}
+
+<div class="account">
+    <!-- info: img, username, email  -->
+
+    <div class="account__container">
+        <!-- form  -->
+        <h1>Mi cuenta</h1>
+        <form class="form" action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {% for field in form %}
+                <label for="profile_pic">{{field.label}}</label>
+                {{field}}
+            {% endfor %}
+
+            <!-- submit  -->
+            <div class="form__action">
+                <a class="btn btn--dark" href="{% url 'main' %}">Cancel</a>
+                <button class="btn btn--main" type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="account__info">
+        {{ form.image_file.url }}
+        <img class="" src="{{ request.user.image_file.url }}">
+        <h2 class="">{{ current_user.username }}</h2>
+        <p class="">{{ current_user.email }}</p>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,64 @@
+.alert__flash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 0.5rem; */
+    /* background-color: greenyellow; */
+}
+
+.alert__flash__left {
+    display: flex;
+    flex-direction: column;
+    /* align-items: left; */
+    /* margin-top: 0.5rem; */
+    position: relative;
+    justify-content: end;
+    top: 3.5rem;
+    left: 21%;
+    width: 75%;
+    /* background-color:greenyellow ; */
+}
+
+.alert__flash__item {
+    padding: 10px;
+    color: white;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.alert__flash__item span {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.alert__flash__item span:hover {
+    color: black;
+}
+
+.alert__flash__success {
+    background-color: var(--btn-success);
+}
+
+.alert__flash__error {
+    background-color: var(--btn-danger);
+}
+
+/*----------------------------------- 
+    Media screen 
+-------------------------------------*/
+@media  screen and (min-width:600px){
+    /* For tablets: */
+
+}
+  
+@media screen and (min-width:768px){ 
+     /* For desktop: */
+     .alert__flash__left {
+        width: 30%;
+        left: 68%;
+     }
+}

@@ -1,0 +1,32 @@
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type='text/css' href="{% static 'styles/templates/header.css' %}">
+{% endblock head %}
+
+<header>
+    <div class="header__menu">
+        <span id='nav_icon' class="material-icons">menu</span>
+    </div>
+    <div class="header__logo">
+        <img src="{% static 'images/logo3.png' %}" class='contain' alt="">
+    </div>
+    
+    <div class="header__user">
+        <!-- request.user.image_file.url -->
+        <img id="user_icon" src="{{ request.user.image_file.url }}" class='contain' alt="">
+    </div>
+
+    <div class="header__usernav" id="header_usernav">
+        <ul class=""> 
+            <li class="li-img">
+                <img id="user_icon" src="{{request.user.image_file.url}}" class='contain' alt="">
+                <span>{{request.user.username}}</span>
+            </li>
+            <li><a href="{% url 'account' %}">Mi cuenta</a></li>
+            <li><a href="{% url 'about' %}">Acerca de</a></li>
+            <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+        </ul>
+    </div>
+</header>
+<script type="text/javascript" src="{% static 'js/templates/nav.js' %}"></script>

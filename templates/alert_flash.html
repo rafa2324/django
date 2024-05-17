@@ -1,0 +1,15 @@
+{% load static %}
+{% block head %}
+<link rel="stylesheet" type='text/css' href="{% static 'styles/templates/alert_flash.css' %}">
+{% endblock head %}
+
+<div class="{{alert_flash}}">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert__flash__item alert__flash__{{message.tags}}">
+                {{ message }}
+                <span onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>

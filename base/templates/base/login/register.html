@@ -1,0 +1,39 @@
+{% extends general.template_container.container %}
+
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type='text/css' href="{% static 'styles/login/login.css' %}">
+{% endblock head %}
+
+
+{% block content %}
+<div class="login">
+    <!-- logo -->
+    <img src="{% static 'images/logo3.png' %}" class='register__logo' alt="">
+
+    <div class="login__container">
+        <h1>Registrarme</h1>
+
+        <form method="POST" action="">
+            {% csrf_token %}
+
+            {% for field in form %}
+                <label for="room_name">{{field.label}}</label>
+                {{field}}
+                {{field.error}}
+            {% endfor %}
+                    
+            <input type="submit" value="Registrar">
+
+        </form>
+
+        <div class="login__register">
+            <span>Ya tienes una cuenta?</span>
+            <a class="ml-2" href="{% url 'login' %}">Iniciar sesión</a>
+        </div>
+
+    </div>
+    
+</div>
+{% endblock content %}

@@ -1,0 +1,91 @@
+{% extends general.template_container.container %}
+{% load static %} 
+
+{% block head %}
+<link rel="stylesheet" type='text/css' href="{% static 'styles/dashboard/dashboard.css' %}">
+{% endblock head %}
+
+{% block content %}
+
+<div class="dashboard">
+
+    <div class="resumen_venta">
+        <div class="">
+            <div class="title">Resumen Ventas:</div>
+                <div class="row header">
+                    <div class="glosa">Comprobante</div>
+                    <div class="number">Cantidad</div>
+                    <div class="number">Monto S/.</div>
+                </div>
+                <div class="row">
+                    <div class="glosa">Facturas</div>
+                    <div class="number">{{data.resumen_venta.count_facturas}}</div>
+                    <div class="number">{{data.resumen_venta.total_facturas}}</div>
+                </div>
+                <div class="row">
+                    <div class="glosa">Boletas</div>
+                    <div class="number">{{data.resumen_venta.count_boletas}}</div>
+                    <div class="number">{{data.resumen_venta.total_boletas}}</div>
+                </div>
+                <div class="row">
+                    <div class="glosa">Total</div>
+                    <div class="number">{{data.resumen_venta.count_ventas}}</div>
+                    <div class="number">{{data.resumen_venta.total_ventas}}</div>
+                </div>
+            </div>    
+
+            <div class="resumen_balance">
+                <div class="title">Resumen Balance:</div>
+                <div class="row header">
+                    <div class="glosa">Concepto</div>
+                    <div class="number">Monto S/.</div>
+                </div>
+                <div class="row">
+                    <div class="glosa">Egresos</div>
+                    <div class="number">{{data.resumen_balance.total_egresos}}</div>
+                </div>
+                <div class="row">
+                    <div class="glosa">Ingresos</div>
+                    <div class="number">{{data.resumen_balance.total_ingresos}}</div>
+                </div>
+                <div class="row">
+                    <div class="glosa">Ganancia</div>
+                    <div class="number">{{data.resumen_balance.total_ganancia}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="resumen_count">
+                <div class="title">Número Registros:</div>
+                <div class="row header">
+                    <div class="glosa">Catálogo</div>
+                    <div class="number">Cantidad</div>
+                </div>
+                <div class="row">
+                    <div class="glosa">Ventas</div>
+                    <div class="number">{{data.resumen_count.count_venta}}</div>
+                </div>
+                <div class="row">
+                    <div class="glosa">Clientes</div>
+                    <div class="number">{{data.resumen_count.count_cliente}}</div>
+                </div>
+                <div class="row">
+                    <div class="glosa">Categorías</div>
+                    <div class="number">{{data.resumen_count.count_categoria}}</div>
+                </div>
+                <div class="row">
+                    <div class="glosa">Producto</div>
+                    <div class="number">{{data.resumen_count.count_producto}}</div>
+                </div>
+                <div class="row">
+                    <div class="glosa">Proveedores</div>
+                    <div class="number">{{data.resumen_count.count_proveedor}}</div>
+                </div>
+            </div>   
+        </div>
+
+     
+</div>
+
+{% endblock content %}

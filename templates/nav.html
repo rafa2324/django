@@ -1,0 +1,37 @@
+{% load static %} 
+
+{% block head %}
+<link rel="stylesheet" type='text/css' href="{% static 'styles/templates/nav.css' %}">
+{% endblock head %}
+
+<nav class='nav' id='nav'>
+    <!-- <img class='logo' src="img/logo_cebim.jpeg" alt="Cebim"> -->
+    <ul>
+        <li><a class="active" href="#">{{general.compania_nombre}}</a></li>
+        {% for option in general.aMenu %}
+        {% if not option.2 %}
+        <!-- set is_show = False if option.3 and (current_user.email != 'ismytv@gmail.com') else True  -->
+           <!-- set url = url_for(option.1) if option.1 != '#' else option.1  -->
+           {% if option.1 != '#' %}
+           <li><a href="{% url option.1 %}">{{option.0}}</a></li>   
+           {% else %}
+                <li><a href="#">{{option.0}}</a></li>
+            {% endif %}
+        {% else %}
+            <li><a href="#"><span class="material-icons">arrow_forward_ios</span><span>{{option.0}}</span></a>
+                <ul>
+                    {% for sub_option in option.2 %}
+                        <!-- set url = url_for(sub_option.1) if sub_option.1 != '#' else option.1  -->
+                        {% if sub_option.1 != '#' %}
+                        <li><a href="{% url sub_option.1 %}">{{sub_option.0}}</a></li>
+                        {% else %}
+                        <li><a href="#">{{sub_option.0}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>    
+            </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+
+</nav>

@@ -1,0 +1,34 @@
+.dashboard {
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: row;
+}
+.dashboard > div {
+    margin: 0.5rem 0.5rem;
+}
+.dashboard > div > div {
+    margin: 1.5rem 0.5rem;
+}
+.dashboard .resumen_venta {
+    width: 50%;
+}
+.dashboard .title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.dashboard .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.25rem;
+}
+.dashboard .header {
+    background-color: var(--grid-background-color-title);
+    color: var(--grid-color-title);
+}
+.resumen_venta .row div {
+    width: 33%;
+}
+.dashboard .number {
+    text-align: right;
+}

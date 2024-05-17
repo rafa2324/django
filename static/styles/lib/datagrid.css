@@ -1,0 +1,72 @@
+
+.grid {
+    display: flex;
+    flex-direction: column;
+}
+.grid__row {
+    display: flex;
+    margin-bottom: 0.35rem;
+    border-radius: 7px;
+    color: var(--grid-text-color);
+}
+.grid__col {
+    text-align: center;
+    padding: 0.25rem;
+}
+.grid__data {
+    height: 100%;
+}
+.grid__row__striped {
+    background-color: var(--grid-background-color-striped);
+    color: var(--grid-text-color);
+    /* width: 100%; */
+}
+.grid__row__title,
+.grid__row__pie  {
+    padding: 0.25rem 0 ;
+    background-color: var(--grid-background-color-title);
+    color: var(--grid-color-title);
+    font-weight: 700;
+    border-radius: 7px;
+}
+.grid__msg {
+    margin: 0.5rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.grid__data .material-icons {
+    color: var(--text-color);
+    font-size: 1.0rem;
+    padding-left: 0.5rem;
+}
+
+/* new */
+.datagrid_pagination {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.7rem;
+    display: flex;
+}
+.datagrid_pagination__buttons {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.button_pagination_primary {
+    background-color: var(--primary);
+    color: var(--btn-text-color);
+}
+.button_pagination_secondary {
+    background-color: var(--secondary);
+    color: var(--btn-background-color);
+}
+
+.datagrid_pagination button {
+    height: 2rem;
+    border: 0;
+    padding: 0.15rem 1rem;
+    display: flex;
+    place-items: center;
+    text-transform: uppercase;
+}

@@ -1,0 +1,122 @@
+/* Opciones Generales */ 
+
+.nav {
+    left: -100%;
+    top: 3rem;
+    position: fixed;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    /* text-align: center; */
+    text-align: start;
+}
+
+.nav__show {
+    left: 0%;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    line-height: 3rem;
+    position: relative;
+}
+
+/* .nav li ul {
+ 
+} */
+
+.nav ul a {
+    color: #ddd;
+    display: block;
+    padding: 0 var(--padding-left-view);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav a:hover {
+    background-color: var(--nav-color-hover-background); 
+    /* rgb(0, 0, 0, 0.5); */
+}
+
+.nav li ul {
+    display: none;
+    /* max-height: 0;
+    overflow: hidden; */
+    transition: all 0.4s;
+}
+
+.nav li:hover > ul {
+    display: block;
+    /* max-height: 500px;
+    overflow: visible; */
+}
+
+.nav li a:hover:not(.active) {
+  background-color: var(--nav-color-hover-background);
+  color: var(--nav-color-hover-text);
+}
+
+.nav li a.active {
+  color: var(--nav-color-activate-text);
+  background-color: var(--nav-color-activate-background);
+}
+
+.nav a .material-icons {
+    height: 1.2rem;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+/* Primer Nivel */
+.nav ul { 
+    background-color: var(--nav-color-background);
+    /* display: table; */
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* Segundo Nivel */
+.nav li > ul > li {
+    background: var(--nav-color-background);;
+    width: 300px;
+    max-width: 300px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    padding-left: 10%;
+}
+
+.nav li:hover > ul > li{
+    max-height: 500px;
+    overflow: visible;
+}
+
+.nav ul ul {
+    left: 100%;
+    top: 0;
+}
+
+@media  screen and (min-width:600px){
+    /* For tablets: */
+}
+  
+@media screen and (min-width:768px){ 
+     /* For desktop: */
+     .nav {
+        text-align:start;
+     }
+     .nav ul {
+         max-width: 300px;
+     }
+     .nav li ul {
+        position: absolute;
+    }
+    .nav li > ul > li {
+        padding-left: 0;
+    }
+    
+}

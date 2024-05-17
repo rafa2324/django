@@ -1,0 +1,131 @@
+/* modal_dialog */
+.modal_dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+.modal_dialog__box {
+    margin: 10% auto;
+    width: 350px;
+    background-color: var(--background-color); 
+    color: var(--text-color);
+    position: relative;
+    animation: modalopen 1s;
+    border: 1px solid lightgray;
+}
+  
+@keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+}
+  
+.modal_dialog__header {
+    padding: 0.5rem;
+    background-color: var(--grid-background-color-title);
+    color: var(--grid-color-title);
+}
+
+.modal_dialog__header h1 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+
+.modal_dialog__body {
+    padding: 1rem;
+}
+  
+.modal_dialog__body h2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+}
+  
+.modal_dialog__body .modal_dialog__body__options {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modal_dialog__body__input {
+    margin-bottom: 1rem;
+}
+  
+.modal_dialog__close {
+    cursor: pointer;
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: black;
+}
+  
+.modal_dialog__footer {
+    background-color: var(--grid-background-color-title);
+    padding: 0.5rem;
+    border-top: 1px solid lightgray;
+    text-align: center;
+}
+  
+.modal_dialog__footer a {
+    color: steelblue;
+}
+
+/* buttons */
+.modal_dialog button {
+    height: 2rem;
+    border: 0;
+    padding: 0.15rem 1rem;
+    display: flex;
+    place-items: center;
+    text-transform: uppercase;
+}
+
+.modal_dialog .button--primary {
+    background-color: var(--primary);
+    color: var(--btn-text-color);
+    display: flex;
+    justify-content: center;
+}
+.modal_dialog .button--secondary {
+    background-color: var(--secondary);
+    color: var(--btn-background-color);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+.modal_dialog .button--danger {
+    background-color: var(--danger);
+    color: var(--btn-text-color);
+}
+  
+/* Media screen */
+@media  screen and (min-width:600px){
+    /* For tablets: */
+}
+  
+@media screen and (min-width:768px){ 
+    /* For desktop: */
+    /* .modal2 .modal__box { */
+    .modal_dialog__box {
+        width: 450px;
+    }
+
+    .modal_dialog__header h1 {
+        padding-top: 0;
+    }
+
+}
